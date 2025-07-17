@@ -1,0 +1,26 @@
+{
+	"name": "reprod",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"projectType": "application",
+	"sourceRoot": "apps/app/src",
+	"tags": [],
+	"targets": {
+		"sync": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "npx cap sync ios",
+				"cwd": "apps/app"
+			}
+		},
+		"build": {
+			"executor": "@nx/angular:browser-esbuild",
+			"outputs": ["{options.outputPath}"],
+			"options": {
+				"outputPath": "dist/apps/app/www",
+				"index": "apps/app/src/index.html",
+				"main": "apps/app/src/main.ts",
+				"tsConfig": "apps/app/tsconfig.app.json"
+			}
+		}		
+	}
+}

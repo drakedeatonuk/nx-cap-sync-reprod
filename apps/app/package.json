@@ -1,0 +1,14 @@
+{
+	"name": "reprod",
+	"license": "UNLICENSED",
+	"private": true,
+	"devDependencies": {
+		"@capacitor/cli": "*"
+	},
+	"dependencies": {
+		"@capacitor/dialog": "*",
+		"@capacitor/browser": "*",
+		"@capacitor/file-viewer": "*",
+		"@capacitor/file-transfer": "*"
+	}
+}
