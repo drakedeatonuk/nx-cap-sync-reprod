@@ -7,7 +7,8 @@ When you run `cap sync`, ther latest capacitor plugins don't sync.
 Run:
 - `yarn`
 - `nx build reprod` 
-- `nx sync reprod` (runs npx cap sync ios)
+- cd into `apps/app` and run `npx cap add ios` and `npx cap add android`
+- cd `../..` and run `nx sync reprod` (runs npx cap sync ios)
 
 Open `apps/app/ios/App/Podfile` or `apps/app/android/capacitor.settings.gradle`
 
